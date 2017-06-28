@@ -1,2 +1,3 @@
-# trauma-center-traducao-ptbr
-[NDS] Megaman ZX - Tradução PT-BR Edit Add topics
+# [NDS] Trauma Center - Tradução PT-BR
+
+Projeto de tradução do jogo "Trauma Center" para português do brasil.
