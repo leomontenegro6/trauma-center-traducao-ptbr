@@ -1,0 +1,21 @@
+Trauma Center - Tags dos textos
+
+F1FF = Tag de pausa de diálogos
+F2FF = Fim do texto
+F3FF = Quebra de linha
+F4FF = Quebra de seção
+
+C8FF 0900 = Escurece a tela
+C9FF 0000 = Clareia a tela
+C7FF 0000 = Seletor branco do mapa na tela de baixo
+CDFF 0000 = Cursor azul
+C0FF 0000 = Música
+C1FF 0000 = Efeito sonoro
+EBFF 0000 = Transição
+E6FF 0000 = Background da tela de cima (?)
+CCFF 0000 = Background da tela de baixo (?)
+E9FF 0000 = Deslize de avatar pela direita
+E7FF = Avatar
+	0E00 = Mary Fulton
+	1200 = Greg Kasal
+	0000 = Derek Stiles

@@ -1,0 +1,41 @@
+Trauma Center - Offsets dos textos
+
+Os textos do jogo estão todos dentro do arquivo "arm9.bin" da rom desmontada.
+
+0x0378E8 - Início dos textos de menus e salvamento de jogo
+0x037B78 - Fim dos textos de menus e salvamento de jogo
+0x03815E - Início dos textos do modo história
+0x0ACD72 - Fim dos textos do modo história
+0x0CDDE0 - Início de textos de briefing
+0x0D0E5C - Fim dos textos de briefing
+-- Ponteiros --
+
+Começam no offset 0x1D6AAC
+
+São de 3 bytes, com o último sendo 0x02.
+
+Em relação à rom, são ponteiros relativos. Mas em relação ao arm9.bin, possuem comportamento absoluto.
+
+A partir do offset acima, já temos 31 ponteiros, com os seguintes valores:
+
+16 82 03 02 | 98 84 03 02 | D8 8E 03 02 | 50 9A 03 02 | BA AC 03 02
+BE BE 03 02 | DC CF 03 02 | AC DF 03 02 | 6A F2 03 02 | 60 FE 03 02
+9A 06 04 02 | 3E 15 04 02 | 1C 25 04 02 | 00 2D 04 02 | 5A 3A 04 02
+E0 3F 04 02 | 42 5D 04 02 | E2 66 04 02 | 8A 76 04 02 | 00 90 04 02
+B8 A5 04 02 | 18 DC 04 02 | FE E4 04 02 | 2A 00 05 02 | 46 1F 05 02
+D6 46 05 02 | BC 57 05 02 | 6C 64 05 02 | 4E 6C 05 02 | CA 81 05 02
+98 8D 05 02
+
+Cada ponteiro desse aponta exatamente para o primeiro caractere
+de uma string, e é precedido de um 0xFF.
+
+Hipótese: Existe a possibilidade de haver ponteiros em outros lugares da rom,
+fora o arquivo "arm9.bin".
+
+Aparentemente negada. Todos os ponteiros de fato parecem estar no "arm9.bin",
+porém em offsets dispersos aleatoriamente no arquivo. O ponteiro para o texto
+"Please select your destination", por exemplo, está situado no offset 0x0F5568.
+
+No entanto, isso sugere que talvez será necessário fazer um mapeamento de
+endereços de vários ponteiros na rom. E talvez isso precise ser feito
+de forma manual.
