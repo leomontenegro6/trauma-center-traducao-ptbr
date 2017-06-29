@@ -1,3 +1,5 @@
 tc/
 orig/
 *.nds
+commitar.sh
+atualizar_repositorio.sh
